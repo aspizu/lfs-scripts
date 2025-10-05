@@ -1,3 +1,21 @@
+# lfs-scripts for LFS v12.4
+
+These are automated scripts to build a minimal Linux From Scratch (LFS) v12.4 system.
+
+## Considerations
+
+1. No `lfs` user is created, building the system is performed as `root`
+2. Optional packages and documentation/manuals are not built
+3. The following packages are not built:
+  - `Man-pages`
+  - `Tcl`
+  - `Expect`
+  - `DejaGNU`
+  - `GRUB`
+  - `Vim`
+4. Stripping of debug symbols is not performed.
+5. System configuration is not performed (Chapter 9 and onwards)
+
 ## Follow the instructions in the book up until the following chapter
 
 ### Chapter 4. Final Preparations
