@@ -23,6 +23,7 @@ pkgopen() {
     cd $LFS/sources
     tar -xf "$1".tar.*
     echo "$1" > .pkgname
+    cd "$1"
 }
 
 pkgclose() {
