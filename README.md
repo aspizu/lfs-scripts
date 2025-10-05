@@ -1,0 +1,69 @@
+## Follow the instructions in the book up until the following chapter
+
+### Chapter 4. Final Preparations
+
+#### 4.2. Creating a Limited Directory Layout in the LFS Filesystem
+
+No need to follow instructions from 4.2, continue with the steps below.
+
+## A. Cloning the `lfs-scripts` repository
+
+```sh
+cd /mnt/lfs
+mkdir -p sources
+cd sources
+git clone https://github.com/aspizu/lfs-scripts
+cd lfs-scripts
+```
+
+## B. Checking if host has necessary tools
+
+```sh
+bash ./lfs-version-check.sh
+```
+
+At this point you should install any missing tools reported by the script.
+
+## C. Downloading and extracting source packages
+
+```sh
+bash ./lfs-sources.sh
+```
+
+## D. Building the temporary toolchain
+
+```sh
+bash ./auto-bootstrap.sh
+```
+
+If any of the build steps fail, figure out the last successful step, fix the problem.
+You can read `/mnt/lfs/sources/.pkgname` file to know the last package that was built.
+Then, comment out all the steps before it in the `auto-bootstrap.sh` script and run it again.
+
+## E. Entering the chroot environment
+
+```sh
+bash ./lfs-chroot.sh
+```
+
+## F. Building the final system
+
+```sh
+cd /mnt/lfs/sources/lfs-scripts
+bash ./auto-install.1.sh
+```
+
+After this you must exit and re-enter the chroot environment to load the newly built
+bash.
+
+## G. Continuing building the final system
+
+```sh
+bash ./auto-install.2.sh
+```
+
+## H. Continue with the instructions in the book from the following chapter:
+
+### Chapter 8. Installing Basic System Software
+
+#### 8.84. Stripping
