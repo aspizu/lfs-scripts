@@ -4,6 +4,7 @@ set -ex
 LFS=/mnt/lfs
 export LFS
 
+mount -v --bind /dev $LFS/dev
 mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts
 mount -vt proc proc $LFS/proc
 mount -vt sysfs sysfs $LFS/sys
