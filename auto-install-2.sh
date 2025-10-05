@@ -5,14 +5,6 @@ lfs-install() {
     bash lfs-install.sh "lfs-install/$1.sh"
 }
 
-lfs-install 7.6-config
-lfs-install 7.7-gettext
-lfs-install 7.8-bison
-lfs-install 7.9-perl
-lfs-install 7.10-python
-lfs-install 7.11-texinfo
-lfs-install 7.12-util-linux
-lfs-install 7.13-cleanup
 lfs-install 8.5-glibc
 lfs-install 8.4-iana-etc
 lfs-install 8.6-zlib
@@ -43,4 +35,4 @@ lfs-install 8.33-gettext
 lfs-install 8.34-bison
 lfs-install 8.35-grep
 lfs-install 8.36-bash
-echo "Restart chroot and continue with auto-install.2.sh"
+echo "Restart chroot and continue with auto-install-3.sh"

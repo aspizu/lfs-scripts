@@ -50,3 +50,4 @@ lfs-install 8.81-sysklogd
 lfs-install 8.82-sysvinit
 lfs-install 8.85-cleanup
 lfs-install 9.2-lfs-bootscripts
+echo "Continue with Chapter 9"

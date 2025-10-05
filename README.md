@@ -68,19 +68,25 @@ bash ./lfs-chroot.sh
 
 ```sh
 cd /mnt/lfs/sources/lfs-scripts
-bash ./auto-install.1.sh
+bash ./auto-install-1.sh
+```
+
+Optionally create a backup of your current `/mnt/lfs` directory.
+
+```sh
+cd /mnt/lfs/sources/lfs-scripts
+bash ./auto-install-2.sh
 ```
 
 After this you must exit and re-enter the chroot environment to load the newly built
 bash.
 
-## G. Continuing building the final system
-
 ```sh
-bash ./auto-install.2.sh
+cd /mnt/lfs/sources/lfs-scripts
+bash ./auto-install-3.sh
 ```
 
-## H. Continue with the instructions in the book from the following chapter:
+## G. Continue with the instructions in the book from the following chapter:
 
 ### Chapter 8. Installing Basic System Software
 
