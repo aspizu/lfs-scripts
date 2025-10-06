@@ -12,3 +12,6 @@ cd /mnt/lfs/sources
 wget -c https://www.linuxfromscratch.org/lfs/downloads/12.4/lfs-bootscripts-20250827.tar.xz
 # (optional) required to download BLFS packages
 wget -c https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz
+# just for reference
+wget -c https://www.linuxfromscratch.org/hints/downloads/hints.tar.bz2 --no-check-certificate
+tar -xf hints.tar.bz2
