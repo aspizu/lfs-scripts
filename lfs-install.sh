@@ -23,8 +23,9 @@ pkggithub() {
         wget -c --no-check-certificate --header="Accept:application/vnd.github.v3.raw" https://api.github.com/repos/${1}/${2}/tarball/${3} -O $2.tar.xz
         mkdir -p $2
         tar -xf $2.tar.xz -C $2 --strip=1
-        rm $2.tar.xz
+        rm "./$2.tar.xz"
         tar -cf $2.tar.xz -C $2 .
+        rm -r "./$2"
     fi
 }
 
