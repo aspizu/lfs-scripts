@@ -9,7 +9,7 @@ mkbuilddir() {
 pkgfetch() {
     cd /sources
     if [[ ! -f $(basename "$1") ]]; then
-        wget -c "$1"
+        wget -c "$1" --no-check-certificate
     fi
 }
 
