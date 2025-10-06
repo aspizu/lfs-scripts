@@ -13,6 +13,17 @@ pkgfetch() {
     fi
 }
 
+# arguments:
+# organization = $1
+# repository = $2
+# branch = $3
+pkggithub() {
+    cd /sources
+    if [[ ! -f $2.tar.xz ]]; then
+        wget -c --no-check-certificate --header="Accept:application/vnd.github.v3.raw" -O - https://api.github.com/repos/${1}/${2}/tarball/${3}
+    fi
+}
+
 pkgopen() {
     cd /sources
     tar -xf "$1".tar.*
