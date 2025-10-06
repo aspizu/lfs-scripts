@@ -8,6 +8,7 @@ sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
             --no-system-cppdap   \
             --no-system-librhash \
             --no-system-libarchive \
+            --no-system-libuv \
             --docdir=/share/doc/cmake-4.1.0
 make
 make install
