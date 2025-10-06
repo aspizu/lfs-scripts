@@ -15,3 +15,4 @@ wget -c https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz
 # just for reference
 wget -c https://www.linuxfromscratch.org/hints/downloads/hints.tar.bz2 --no-check-certificate
 tar -xf hints.tar.bz2
+rm hints.tar.bz2
