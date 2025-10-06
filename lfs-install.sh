@@ -20,7 +20,7 @@ pkgfetch() {
 pkggithub() {
     cd /sources
     if [[ ! -f $2.tar.xz ]]; then
-        wget -c --no-check-certificate --header="Accept:application/vnd.github.v3.raw" -O - https://api.github.com/repos/${1}/${2}/tarball/${3}
+        wget -c --no-check-certificate --header="Accept:application/vnd.github.v3.raw" https://api.github.com/repos/${1}/${2}/tarball/${3}
     fi
 }
 
