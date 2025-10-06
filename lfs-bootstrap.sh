@@ -31,4 +31,4 @@ pkgclose() {
     rm -r "$(< .pkgname)"
 }
 
-source "$1"
+source "$1.sh"

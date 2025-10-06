@@ -7,12 +7,14 @@ These are automated scripts to build a minimal Linux From Scratch (LFS) v12.4 sy
 1. No `lfs` user is created, building the system is performed as `root`
 2. Optional packages and documentation/manuals are not built
 3. The following packages are not built:
-  - `Man-pages`
-  - `Tcl`
-  - `Expect`
-  - `DejaGNU`
-  - `GRUB`
-  - `Vim`
+
+- `Man-pages`
+- `Tcl`
+- `Expect`
+- `DejaGNU`
+- `GRUB`
+- `Vim`
+
 4. Stripping of debug symbols is not performed.
 5. System configuration is not performed (Chapter 9 and onwards)
 
@@ -67,14 +69,12 @@ bash ./lfs-chroot.sh
 ## F. Building the final system
 
 ```sh
-cd /mnt/lfs/sources/lfs-scripts
 bash ./auto-install-1.sh
 ```
 
 Optionally create a backup of your current `/mnt/lfs` directory.
 
 ```sh
-cd /mnt/lfs/sources/lfs-scripts
 bash ./auto-install-2.sh
 ```
 
@@ -82,7 +82,6 @@ After this you must exit and re-enter the chroot environment to load the newly b
 bash.
 
 ```sh
-cd /mnt/lfs/sources/lfs-scripts
 bash ./auto-install-3.sh
 ```
 
@@ -91,3 +90,17 @@ bash ./auto-install-3.sh
 ### Chapter 8. Installing Basic System Software
 
 #### 8.84. Stripping
+
+# Beyond Linux From Scratch (System V Edition) v12.4
+
+Install `wget` first as it is required to download other packages.
+
+```sh
+./lfs-install.sh blfs/wget
+```
+
+## Installing a bootscript from `blfs-bootscripts`
+
+```sh
+./lfs-install.sh blfs/blfs-bootscripts <init-script>
+```

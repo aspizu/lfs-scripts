@@ -2,7 +2,7 @@
 set -ex
 
 lfs-bootstrap() {
-    bash lfs-bootstrap.sh "lfs-bootstrap/$1.sh"
+    bash lfs-bootstrap.sh "lfs-bootstrap/$1"
 }
 
 lfs-bootstrap 4.2-filesystem

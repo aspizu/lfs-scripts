@@ -6,6 +6,13 @@ mkbuilddir() {
     cd build
 }
 
+pkgfetch() {
+    cd /sources
+    if [[ ! -f $(basename "$1") ]]; then
+        wget -c "$1"
+    fi
+}
+
 pkgopen() {
     cd /sources
     tar -xf "$1".tar.*
@@ -18,4 +25,4 @@ pkgclose() {
     rm -r "$(< .pkgname)"
 }
 
-source "$1"
+source "$1.sh"

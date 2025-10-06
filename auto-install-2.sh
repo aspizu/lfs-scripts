@@ -2,7 +2,7 @@
 set -ex
 
 lfs-install() {
-    bash lfs-install.sh "lfs-install/$1.sh"
+    bash lfs-install.sh "lfs-install/$1"
 }
 
 lfs-install 8.5-glibc

@@ -10,3 +10,5 @@ mv /mnt/lfs/sources/ncurses-6.5-20250809.tgz /mnt/lfs/sources/ncurses-6.5-202508
 # Download correct version of lfs-bootscripts
 cd /mnt/lfs/sources
 wget -c https://www.linuxfromscratch.org/lfs/downloads/12.4/lfs-bootscripts-20250827.tar.xz
+# (optional) required to download BLFS packages
+wget -c https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz
