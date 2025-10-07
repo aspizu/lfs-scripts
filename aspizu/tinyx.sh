@@ -1,3 +1,3 @@
-pkggithub https://github.com/tinycorelinux/tinyx
+pkggithub tinycorelinux tinyx master
 pkgopen tinyx
 pkgclose
