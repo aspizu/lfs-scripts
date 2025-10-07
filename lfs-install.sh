@@ -24,7 +24,7 @@ pkggithub() {
         mkdir -p $2
         tar -xf $2.tar.xz -C $2 --strip=1
         rm "./$2.tar.xz"
-        tar -cf $2.tar.xz -C $2 .
+        tar -cf $2.tar.xz $2
         rm -r "./$2"
     fi
 }
