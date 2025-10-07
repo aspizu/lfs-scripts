@@ -1,5 +1,5 @@
 pkgfetch https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2024.1.tar.xz
-pkgopen
+pkgopen xorgproto-2024.1
 mkbuilddir
 meson setup --prefix=$XORG_PREFIX ..
 ninja
