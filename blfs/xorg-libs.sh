@@ -67,7 +67,7 @@ do
         meson setup --prefix=$XORG_PREFIX --buildtype=release ..
         ninja
         #ninja test
-        as_root ninja install
+         ninja install
       popd     # $packagedir
       continue # for loop
     ;;
@@ -79,8 +79,8 @@ do
 
   make
   #make check 2>&1 | tee ../$packagedir-make_check.log
-  as_root make install
+   make install
   popd
   rm -rf $packagedir
-  as_root /sbin/ldconfig
+   /sbin/ldconfig
 done
