@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -ex
 
+export XORG_PREFIX="/usr"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+
 mkbuilddir() {
     mkdir -p build
     cd build
