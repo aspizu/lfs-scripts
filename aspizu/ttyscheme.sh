@@ -1,4 +1,4 @@
 pkggithub kolunmi ttyscheme main
 pkgopen ttyscheme
-make install
+make PREFIX=/usr install
 pkgclose
