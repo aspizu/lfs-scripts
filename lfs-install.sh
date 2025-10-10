@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-
-export XORG_PREFIX="/usr"
+source config.sh
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
     --localstatedir=/var --disable-static"
 

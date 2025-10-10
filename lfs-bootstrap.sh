@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-
+source config.sh
 set +h
 umask 022
 LFS=/mnt/lfs

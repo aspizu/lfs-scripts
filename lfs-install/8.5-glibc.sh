@@ -4,7 +4,7 @@ sed -e '/unistd.h/i #include <string.h>' \
     -e '/libc_rwlock_init/c\
   __libc_rwlock_define_initialized (, reset_lock);\
   memcpy (&lock, &reset_lock, sizeof (lock));' \
-    -i stdlib/abort.c 
+    -i stdlib/abort.c
 mkbuilddir
 echo "rootsbindir=/usr/sbin" > configparms
 ../configure --prefix=/usr                   \
@@ -84,7 +84,7 @@ done
 cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
 zic -d $ZONEINFO -p America/New_York
 unset ZONEINFO tz
-ln -sfv /usr/share/zoneinfo/$(tzselect) /etc/localtime
+ln -sfv /usr/share/zoneinfo/$TIMEZONE /etc/localtime
 cat > /etc/ld.so.conf << "EOF"
 # Begin /etc/ld.so.conf
 /usr/local/lib
