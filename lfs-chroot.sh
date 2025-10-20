@@ -17,7 +17,6 @@ fi
 chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \
     TERM="$TERM"                \
-    PWD=/root                   \
     PS1='(lfs-chroot) \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' \
     PATH=/usr/bin:/usr/sbin     \
     MAKEFLAGS="-j$(nproc)"      \
