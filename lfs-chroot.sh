@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
-set -ex
+set -e
 
 LFS=/mnt/lfs
 export LFS
 
-mount -v --bind /dev $LFS/dev
-mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts
-mount -vt proc proc $LFS/proc
-mount -vt sysfs sysfs $LFS/sys
-mount -vt tmpfs tmpfs $LFS/run
+mount --bind /dev $LFS/dev
+mount -t devpts devpts -o gid=5,mode=0620 $LFS/dev/pts
+mount -t proc proc $LFS/proc
+mount -t sysfs sysfs $LFS/sys
+mount -t tmpfs tmpfs $LFS/run
 if [ -h $LFS/dev/shm ]; then
-  install -v -d -m 1777 "$LFS$(realpath /dev/shm)"
+  install -d -m 1777 "$LFS$(realpath /dev/shm)"
 else
-  mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm
+  mount -t tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm
 fi
 chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \
     TERM="$TERM"                \
-    PS1='\[\e[37m\](lfs-chroot) \[\e[92m\]\u@\h\[\e[0m\] \w \[\e[37m\]\$\[\e[0m\] ' \
+    PWD=/root                   \
+    PS1='(lfs-chroot) \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' \
     PATH=/usr/bin:/usr/sbin     \
     MAKEFLAGS="-j$(nproc)"      \
     TESTSUITEFLAGS="-j$(nproc)" \
